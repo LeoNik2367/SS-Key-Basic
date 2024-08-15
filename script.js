@@ -134,13 +134,17 @@ function displayResult(data) {
 
   let resultText = "";
   if (correctPoly) {
-    const secret = correctPoly[0];
-    resultText += `Correct polynomial coefficients: ${correctPoly}\nSecret Key: ${secret}`;
+    const roundedPoly = correctPoly.map((coeff) => Math.round(coeff));
+    const secret = roundedPoly[0];
+
+    resultText += `Correct polynomial coefficients:\n${roundedPoly
+      .map((coeff, index) => `Coefficient of x^${index}: ${coeff}`)
+      .join("\n")}\n\nSecret Key: ${secret}`;
   } else {
     resultText += "No correct combination found.\n";
   }
   if (wrongShares) {
-    resultText += `Incorrect shares: ${wrongShares
+    resultText += `\nIncorrect shares: ${wrongShares
       .map(([x, y]) => `(${x}, ${y})`)
       .join(", ")}`;
   }
