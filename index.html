@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polynomial Reconstruction</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="btn-container">
+        <button id="swap-btn" class="swap-btn">
+          <i id="dark-mode-icon" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+      <h1>SS Key Reconstruction</h1>
+      <input type="file" id="fileInput" />
+      <button onclick="processFile()">Process File</button>
+      <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  transition: background 1.2s, color 1.2s;
+  margin: 20px;
+  background: hsl(200, 75%, 65%);
+  color: #000;
+}
+
+.container.dark {
+  background: hsl(200, 65%, 8%);
+  color: #fff;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.swap-btn {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #333;
+  font-size: 2em;
+  outline: none;
+  cursor: pointer;
+  transition: color 1.2s, background-color 1.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swap-btn i {
+  transition: color 1.2s;
+}
+
+.dark .swap-btn {
+  color: #ffd43b;
+}
+
+.dark .swap-btn i {
+  color: #ffd43b;
+}
+
+.swap-btn i.fa-moon {
+  color: #0f0f0f;
+}
+
+.dark .swap-btn i.fa-sun {
+  color: #ffd43b;
+}
+
+h1 {
+  text-align: center;
+  color: inherit; /* Ensure text color changes */
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+  width: calc(100% - 40px);
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 1.2s, color 1.2s;
+}
+
+.container.dark input[type="file"] {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 1.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  color: inherit; /* Ensure text color changes */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
