@@ -113,8 +113,12 @@ button:hover {
 }
 
 #result {
-  margin-top: 20px;
-  color: inherit; /* Ensure text color changes */
+  word-wrap: break-word; /* Forces long words to break and wrap onto the next line */
+  overflow-wrap: break-word; /* Alternative property to ensure text wrapping */
+  white-space: pre-wrap; /* Maintains whitespace and wraps text normally */
+  max-width: 100%; /* Ensure the container does not exceed the width of the parent */
+  padding: 10px;
+  box-sizing: border-box; /* Ensure padding is included within the width/height */
 }
 
 .fade-in {
